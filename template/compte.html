@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <link rel="shortcut icon" type="image/ico" href="img/favicon.gif" />
+        <title> AnimateYoureFace </title>
+    </head>
+
+
+    <body>
+
+
+        <section class="sectionPage" id="FirstDiv">
+
+            <div class="menu">
+                <span class="menuItems" id="home" onclick="navigation('/')">Home</span>
+                <span class="menuItems" id="upload"  onclick="navigation('/upload/telechargement')">téléchargement</span>
+                <span class="menuItems" id="visualization" onclick="navigation('/visualisation/visualisation')">visualisation</span>
+                <span class="menuItems" id="partenairsheap" onclick="navigation('/site_partenaire')">site partenaire</span>
+            </div>
+
+            <div class="Div"><!-- Top First Div -->
+
+                <div class="divA" id="a1">
+
+                </div>
+
+
+                <div class="divB">
+                    <center>
+                        <div id="" style="padding-top:5%;">
+                            <h2>Création de compte</h2>
+                        </div>
+                    </center>
+                    
+                </div>
+
+                <div class="divC">
+
+                </div>
+
+
+            </div>
+
+
+            <div class="Div">
+
+
+                <div class="divA" id="a2"></div>
+
+
+                <div class="divB">
+
+
+                    <center>
+                        <button onclick="displaying('balise_one')">Connexion</button>
+                        <button onclick="displaying('balise_two')">Inscription</button>
+                        <form method="POST" id="" action="logout_view">{% csrf_token %}<br><br><center>
+                            <br>
+                            Deconnexion.<br>
+
+                            <button type="submit" id="">Deconnexion</button>
+                        </form>
+                    </center>
+
+                    
+                    <center>
+
+                        <div id="balise_one" style="display:none">
+
+                            {{mode}}
+                            <form method="POST" id="" action="login_view">{% csrf_token %}<br><br><center>
+
+                                Je connecte.
+                                    {{login}}
+                                    <button type="submit" id="registration">Button</button>
+                            </form>
+                        </div>
+
+
+                        <div id="balise_two" style="display:none">
+                            <form method="POST" id="" action="register_view">{% csrf_token %}<br><br><center>
+                                <br>
+                                Je m'inscris.<br>
+                                    {{register}}
+                                    <button type="submit" id="">Button</button>
+                            </form>
+
+
+
+
+
+                            
+                        </div>
+                    </center>
+                
+                </div>
+
+                <div class="divC"></div>
+
+            </div>
+
+
+
+
+            <div class="Div">
+
+                <div class="divA" id="a3">
+                </div>
+
+
+
+                <div class="divB">
+                    <center>
+                        <p style="padding-top:5%;">
+                            explications
+                        </p>
+                    </center>
+                </div>
+
+
+                <div class="divC">
+
+
+                </div>
+
+            </div>
+
+
+
+
+        </section>
+
+    </body>
+</html>
+
+
+
+<style>
+
+    #account{
+    }
+    #upload{
+        margin-left:10%;
+    }
+    #visualization{
+        margin-left:10%;
+    }
+    #partenairsheap{
+        margin-left:10%;
+    }
+
+    #account:hover{
+        background:green;
+    }
+    #upload:hover{
+        background:green;
+    }
+    #visualization:hover{
+        background:green;
+    }
+    #partenairsheap:hover{
+        background:green;
+    }
+
+
+    .menuItems{
+        width:100%;
+        cursor:pointer;
+        border:1px solid black;
+    }
+    .menu{
+        position:relative;
+        width:auto;
+        height:auto;
+        border:1px solid red;
+        text-align:center;
+    }
+
+
+
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js"></script>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+  
+
+
+<script>
+
+
+    function navigation(page2){
+        document.location.href=page2; 
+    };
+
+
+    function displaying(balise){
+        document.getElementById(balise).style.display = "block";
+    };
+
+
+
+
+</script>
+
+
+
